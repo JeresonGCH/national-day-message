@@ -6,16 +6,17 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
   </head>
   <body> 
-    <h1>ational Day Message</h1>
+    <h1>National Day Message</h1>
       <form method="post"> 
         Message: <input type ="text" name = "message"> 
         <input type = 'submit' value ="post"> <!---value is the txt on the button --->
       </form>
-      {% if message %}   <!---these jjinja statements are logic statements and used to process data in html --->
-        {{ message }}
-      {% endif %}
-      {% for post in posts %}
-        {{ post }} <br />
-      {$ endfor %}
+    {% if message %}   <!---these jjinja statements are logic statements and used to process data in html --->
+       {{ message }}
+    {% endif %}
+    
+    {% for post in posts %}
+      {{ post }} <br/>
+    {% endfor %}
   </body>
 </html>
